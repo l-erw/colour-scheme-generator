@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="colour-selection">
+                <input type="color" id="colour-picker">
+                <p id="chosen-colour-code">#000000</p>
+                
+                <select aria-label="select a colour" id="scheme-selector">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-dark</option>
+                    <option value="monochrome-light">Monochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
+                </select>
+                
+                <button id="get-colour">Get colour scheme</button>
+            </div>
+            
+            <div class="colours-display">
+                <div class="colour box-1" id="colour1"></div>
+                <div class="colour box-2" id="colour2"></div>
+                <div class="colour box-3" id="colour3"></div>
+                <div class="colour box-4" id="colour4"></div>
+                <div class="colour box-5" id="colour5"></div>
+            </div>
+            
+            <div class="colour-names">
+                <div class="colour-id" id="colour-id1">#000000</div>
+                <div class="colour-id" id="colour-id2">#1A1919</div>
+                <div class="colour-id" id="colour-id3">#343232</div>
+                <div class="colour-id" id="colour-id4">#4F4A4A</div>
+                <div class="colour-id" id="colour-id5">#6A6262</div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
