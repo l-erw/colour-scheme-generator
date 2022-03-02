@@ -32,6 +32,7 @@ input {
     width: 61px;
     border: 1px #d1d5db solid;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #chosen-colour-code {
@@ -52,6 +53,7 @@ select {
     font-weight: 300;
     border-radius: 4px;
     padding: 0 0.5em;
+    cursor: pointer;
 }
 
 .toggle {
