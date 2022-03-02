@@ -7,9 +7,9 @@
     </head>
     <body>
         <div class="container">
-            <div class="colour-selection">
+            <div class="selection-container">
                 <input type="color" id="colour-picker">
-                <p id="chosen-colour-code">#000000</p>
+                <input id="chosen-colour-code" value="#000000" placeholder="#000000"></input>
                 
                 <select aria-label="select a colour" id="scheme-selector">
                     <option value="monochrome">Monochrome</option>
@@ -21,8 +21,14 @@
                     <option value="triad">Triad</option>
                     <option value="quad">Quad</option>
                 </select>
-                
-                <button id="get-colour">Get colour scheme</button>
+
+                <div class="toggle-container">
+                    <label class="toggle">
+                        <input type="checkbox" id="toggle" data-on="HEX" data-off="RGB" value="ON">
+                        <span class="slider round">
+                        <span class="labels" data-on="HEX" data-off="RGB"></span>
+                    </label>
+                </div>
             </div>
             
             <div class="colours-display">

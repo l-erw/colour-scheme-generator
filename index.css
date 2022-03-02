@@ -16,7 +16,7 @@ html, body {
     margin: 1em auto;
 }
 
-.colour-selection {
+.selection-container {
     position: relative;
     height: 90px;
     display: flex;
@@ -27,30 +27,137 @@ html, body {
     z-index: 1;
 }
 
-.colour-selection p {
-    border: 1px #d1d5db solid;
-    padding: 1.125em 0.75em;
-    border-radius: 5px;
-    text-transform: uppercase;
-    
-}
-
 input {
-    height: 42px;
+    height: 40px;
     width: 61px;
     border: 1px #d1d5db solid;
     border-radius: 5px;
 }
 
+#chosen-colour-code {
+    font-family: inherit;
+    font-size: 0.825rem;
+    padding: 0 0.5em;
+    width: 100px;
+    text-align: center;
+}
+
 select {
-    font-size: 1.125rem;
+    /* font-size: 1.125rem; */
     width: 200px;
-    height: 43px;
+    height: 40px;
     border: 1px #d1d5db solid;
     background-color: #fff;
     font-family: inherit;
     font-weight: 300;
+    border-radius: 4px;
+    padding: 0 0.5em;
 }
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(216, 110, 159);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+input:checked + .slider {
+    background-color: rgb(84, 164, 189);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(84, 164, 189);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    padding: 0.25em 0.5em;
+    border-radius: 4px;
+}
+
+.label-container {
+    padding: 0 0.5em;
+    font-size: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.toggle .labels {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(36, 36, 36);
+    font-size: 0.65rem;
+}
+
+.toggle .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 8px;
+}
+
+.toggle .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    left: 8px;
+
+}
+ 
 
 button {
     padding: 1.125em 0.75em;
